@@ -8,7 +8,7 @@ cityList.forEach(addCity);//forEach loop to run the process for each city
 
 //ifelse to change the background when city selected from Select #city-list
 $('#city-type').change(function(){ // selecting an option will run the function
-    event.preventDefault(); //prevents the submits default action
+    // event.preventDefault(); //prevents the submits default action
     var city = $('#city-type').val(); //save user input to compare in conditional
     $('#city-type').val(''); //conditional that takes the various expected inputs from user and returns the correct image
     if (city =="NYC"){ 
@@ -22,6 +22,5 @@ $('#city-type').change(function(){ // selecting an option will run the function
     } else if (city == "SYD") {      
        $('body').attr('class','sydney');
     }
-    console.log(city); // log city variable so I can test my code when it doesn't work
-   });
+  })
 })
